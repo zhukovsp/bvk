@@ -112,12 +112,12 @@
                         <div class="col-sm-12 col-xs-12">
                             <div class="map-container"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.2947520281873!2d37.411340215931205!3d55.77075248055813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b548c946dce321%3A0x334ecb04f294704d!2z0JrRgNGL0LvQsNGC0YHQutCw0Y8g0YPQuy4sIDI1LCDQnNC-0YHQutCy0LAsIDEyMTYxNA!5e0!3m2!1sru!2sru!4v1516257241170"></iframe> </div>
                             <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-xs-12 col-xs-12 col-xs-offset-0">
-                                <h3>{{page.section_4_title}}</h3>
-                                <p class="lead">{{page.section_4_text_1}}</p>
+                                <h3>{{page.section_4_title | newline_to_br}}</h3>
+                                <p class="lead">{{page.section_4_text_1 | newline_to_br}}</p>
 
-                                <p class="lead">{{page.section_4_text_2}}<br></p>
+                                <p class="lead">{{page.section_4_text_2 | newline_to_br}}<br></p>
 
-                                <p class="lead">{{page.section_4_text_3}}</p>
+                                <p class="lead">{{page.section_4_text_3 | newline_to_br}}</p>
                                 <div class="cta">
                                     <a class="btn btn--primary btn--lg type--uppercase" href="#order">
                                         <span class="btn__text">{{page.section_4_button}}</span>
