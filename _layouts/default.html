@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{{page.title}}</title>
+        <meta name="description" content="{{page.title}}" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="assets/css/flickity.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="assets/css/stack-interface.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="assets/css/theme-serpent.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="assets/css/custom.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="assets/css/one.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
+    </head>
+    <body data-smooth-scroll-offset="77">
+      {{ content }}
+        <div class="nav-container"> </div>
+        <div class="main-container">
+            <section id="order" class="switchable imagebg height-100" data-overlay="2">
+                <div class="background-image-holder"><img alt="background" src="assets/img/basseyn-v-krylatskom.jpg"></div>
+                <div class="container pos-vertical-center">
+                    <div class="row">
+                        <div class="col-md-5 col-sm-7 switchable__text">
+                            <h1 class="title-x">{{page.section_1_title}}</h1>
+                            <p class="lead text-x">{{page.section_1_description | newline_to_br}}</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="boxed boxed--lg bg--white boxed--border boxed-form">
+                                <h4>{{page.section_1_form_title}}</h4>
+                                <p>{{page.section_1_form_subtitle}}</p>
+                                <form>
+                                    <div class="row">
+                                      <div class="col-xs-12"> <input type="text" name="fio" placeholder="Ваше имя"> </div>
+                                        <div class="col-xs-12"> <input type="text" name="Email Address" placeholder="Телефон"> </div>
+                                        <div class="col-xs-12"> <button type="submit" class="btn btn--primary type--uppercase">{{page.section_1_button}}</button> </div>
+                                        <div class="col-xs-12 agreement"> <span class="type--fine-print">Отправляя заявку, вы соглашаетесь с <a href="#">Политикой</a> в отношении обработки персональных данных </span></div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="text-center section-group">
+                <div class="container">
+                    <div class="row">
+                        <h1 class="title-a text-center">{{page.section_2_title}}</h1>
+                        <div class="col-sm-4">
+                            <div class="feature feature-1"> <img alt="Image" src="assets/img/grouppa_deti.jpg">
+                                <div class="feature__body boxed boxed--lg boxed--border">
+                                    <h3>{{page.section_2_subtitle_1}}</h3>
+                                    <p class="lead">{{page.section_2_desc_1}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="feature feature-1"> <img alt="Image" src="assets/img/grouppa_vzroslye.jpg">
+                                <div class="feature__body boxed boxed--lg boxed--border">
+                                    <h3>{{page.section_2_subtitle_2}}</h3>
+                                    <p class="lead">{{page.section_2_desc_2}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="feature feature-1"> <img alt="Image" src="assets/img/gruppa_vzroslye-i-deti.jpg">
+                                <div class="feature__body boxed boxed--lg boxed--border">
+                                    <h3>{{page.section_2_subtitle_3}}</h3>
+                                    <p class="lead">{{page.section_2_desc_3}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="space--sm text-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-md-6">
+                            <div class="cta">
+                                <a class="btn btn--primary btn--lg type--uppercase" href="#order">
+                                    <span class="btn__text">{{page.section_2_button}}</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="switchable bg--secondary">
+                <div class="container">
+                    <div class="row">
+                          <div class="col-sm-6 col-md-5">
+                            <div class="accordion__content">
+                                <p class="lead section-text">{{page.section_3_text | newline_to_br}}</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="slider box-shadow-wide border--round" data-arrows="true" data-paging="true">
+                                <ul class="slides">
+                                    <li> <img alt="img" src="assets/img/slider_1.jpg"> </li>
+                                    <li> <img alt="img" src="assets/img/slider_2.jpg"> </li>
+                                    <li> <img alt="img" src="assets/img/slider_3.jpg"> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="text-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-xs-12">
+                            <div class="map-container"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.2947520281873!2d37.411340215931205!3d55.77075248055813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b548c946dce321%3A0x334ecb04f294704d!2z0JrRgNGL0LvQsNGC0YHQutCw0Y8g0YPQuy4sIDI1LCDQnNC-0YHQutCy0LAsIDEyMTYxNA!5e0!3m2!1sru!2sru!4v1516257241170"></iframe> </div>
+                            <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-xs-12 col-xs-12 col-xs-offset-0">
+                                <h3>{{page.section_4_title}}</h3>
+                                <p class="lead">{{page.section_4_text_1}}</p>
+
+                                <p class="lead">{{page.section_4_text_2}}<br></p>
+
+                                <p class="lead">{{page.section_4_text_3}}</p>
+                                <div class="cta">
+                                    <a class="btn btn--primary btn--lg type--uppercase" href="#order">
+                                        <span class="btn__text">{{page.section_4_button}}</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script src="assets/js/jquery-3.1.1.min.js"></script>
+        <script src="assets/js/flickity.min.js"></script>
+        <script src="assets/js/parallax.js"></script>
+        <script src="assets/js/smooth-scroll.min.js"></script>
+        <script src="assets/js/scripts.js"></script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); ga('create', '123123', 'auto'); ga('send', 'pageview');
+        </script>
+
+    </body>
+
+</html>
