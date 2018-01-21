@@ -48,8 +48,8 @@
                                 <p>{{page.section_1_form_subtitle}}</p>
                                 <form action="" name="orderform" id="orderform" method="post">
                                     <div class="row">
-                                      <div class="col-xs-12"> <input type="text" name="fio" placeholder="Ваше имя" required="required"> </div>
-                                        <div class="col-xs-12"> <input type="text" name="Email Address" placeholder="Телефон" required="required"> </div>
+                                      <div class="col-xs-12"> <input type="text" name="name" placeholder="Ваше имя" required="required"> </div>
+                                        <div class="col-xs-12"> <input type="text" name="phone" placeholder="Телефон" required="required"> </div>
                                         <div class="col-xs-12"> <button type="submit" class="btn btn--primary type--uppercase">{{page.section_1_button}}</button> </div>
                                         <div class="col-xs-12 agreement"> <span class="type--fine-print">Отправляя заявку, вы соглашаетесь с <a href="#">Политикой</a> в отношении обработки персональных данных </span></div>
                                     </div>
@@ -189,9 +189,7 @@
         <script src="assets/js/scripts.js"></script>
         <script>
             $(document).ready(function () {
-              console.log("kjwke");
                 $("#orderform").submit(function () {
-                  alert('jkhkj');
                     event.preventDefault();
                     // Получение ID формы
                     var formID = $(this).attr('id');
@@ -203,7 +201,7 @@
                         data: formNm.serialize(),
                         success: function (data) {
                             // Вывод текста результата отправки
-                            $(formNm).html(data);
+                            $(formNm).html('<span class="sbmt_text">' + data + '</span>');
                         },
                         error: function (jqXHR, text, error) {
                             // Вывод текста ошибки отправки
