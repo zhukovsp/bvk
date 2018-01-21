@@ -46,10 +46,10 @@
                             <div class="boxed boxed--lg bg--white boxed--border boxed-form">
                                 <h4>{{page.section_1_form_title}}</h4>
                                 <p>{{page.section_1_form_subtitle}}</p>
-                                <form>
+                                <form action="" name="orderform" id="orderform" method="post">
                                     <div class="row">
-                                      <div class="col-xs-12"> <input type="text" name="fio" placeholder="Ваше имя"> </div>
-                                        <div class="col-xs-12"> <input type="text" name="Email Address" placeholder="Телефон"> </div>
+                                      <div class="col-xs-12"> <input type="text" name="fio" placeholder="Ваше имя" required="required"> </div>
+                                        <div class="col-xs-12"> <input type="text" name="Email Address" placeholder="Телефон" required="required"> </div>
                                         <div class="col-xs-12"> <button type="submit" class="btn btn--primary type--uppercase">{{page.section_1_button}}</button> </div>
                                         <div class="col-xs-12 agreement"> <span class="type--fine-print">Отправляя заявку, вы соглашаетесь с <a href="#">Политикой</a> в отношении обработки персональных данных </span></div>
                                     </div>
@@ -151,6 +151,7 @@
                 </div>
             </section>
         </div>
+
         <!-- Yandex.Metrika counter -->
         <script type="text/javascript" >
             (function (d, w, c) {
@@ -187,9 +188,36 @@
         <script src="assets/js/smooth-scroll.min.js"></script>
         <script src="assets/js/scripts.js"></script>
         <script>
+            $(document).ready(function () {
+              console.log("kjwke");
+                $("#orderform").submit(function () {
+                  alert('jkhkj');
+                    event.preventDefault();
+                    // Получение ID формы
+                    var formID = $(this).attr('id');
+                    // Добавление решётки к имени ID
+                    var formNm = $('#' + formID);
+                    $.ajax({
+                        type: "POST",
+                        url: 'formhandler.php',
+                        data: formNm.serialize(),
+                        success: function (data) {
+                            // Вывод текста результата отправки
+                            $(formNm).html(data);
+                        },
+                        error: function (jqXHR, text, error) {
+                            // Вывод текста ошибки отправки
+                            $(formNm).html(error);
+                        }
+                    });
+                    return false;
+                });
+            });
+        </script>
+        <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); ga('create', '123123', 'auto'); ga('send', 'pageview');
         </script>
-        
+
         <!-- BEGIN JIVOSITE CODE {literal} -->
         <script type='text/javascript'>
         (function(){ var widget_id = 'aKIMDsj6Vx';var d=document;var w=window;function l(){
