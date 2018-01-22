@@ -35,3 +35,4 @@ section_4_text_3: Мы открыты ежедневно с 7 до 23:00 (Мск
 section_4_button: Записаться на тренировку
 layout: default
 ---
+
