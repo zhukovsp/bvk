@@ -2,14 +2,14 @@
 title: Бассейн в Крылатском
 timezone: UTC
 collections:
-  managers:
-    title: Managers
-    output: true
   posts:
     title: Posts
     output: true
   uploads:
     title: Uploads
+    output: true
+  amocrm_managers:
+    title: amocrm_managers
     output: true
 email: your-email@example.com
 description: Write an awesome description for your new site here. You can edit this
